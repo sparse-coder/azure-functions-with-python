@@ -5,7 +5,7 @@ on:
 
 env:
   AZURE_FUNCTION_APP_NAME: "scrapper-func"
-  AZURE_FUNCTIONAPP_PACKAGE_PATH: '{{github.workspace}}'
+  AZURE_FUNCTIONAPP_PACKAGE_PATH: '.'
   PYTHON_VERSION: '3.8'
 
 jobs:
@@ -23,7 +23,7 @@ jobs:
       - name: 'Resolve project dependencies using pip'
         shell: bash
         run: |
-          pushd './{{AZURE_FUNCTIONAPP_PACKAGE_PATH}}'
+          pushd './${{AZURE_FUNCTIONAPP_PACKAGE_PATH}}'
           python -m pip install --upgrade pip
           pip install -r requirements.txt --target=".python_packages/lib/site-packages"
           popd
