@@ -11,6 +11,6 @@ def scrape(url: str):
         for p in soup.find_all('p'):
             x = p.text
             para.append(x) if x else 1
-        cmp_para = "".join(para)
+        cmp_para = " ".join(para)
         return json.dumps({"status": 200, "content":cmp_para })
     return json.dumps({"status": "No Idea"})

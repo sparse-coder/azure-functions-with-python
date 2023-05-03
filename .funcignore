@@ -1,1 +1,7 @@
 .venv
+.vscode
+
+#additional files
+local.settings.json
+__azurite*.json
+__blobstorage__/
