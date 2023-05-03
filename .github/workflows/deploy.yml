@@ -5,7 +5,7 @@ on:
 
 env:
   AZURE_FUNCTION_APP_NAME: "scrapper-func"
-  AZURE_FUNCTIONAPP_PACKAGE_PATH: '.'
+  AZURE_FUNCTIONAPP_PACKAGE_PATH: '{{github.workspace}}'
   PYTHON_VERSION: '3.8'
 
 jobs:
